@@ -1,0 +1,488 @@
+@import 'colors.scss';
+@import 'typography.scss';
+@import 'mixins.scss';
+@import 'responsive.scss';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    a[href^="#"] {
+        text-decoration: none;
+        color: $color-black;
+
+        transition: color 0.3s;
+    }
+
+    a[href^="#"]:hover {
+        color: yellow;
+
+    }
+
+}
+
+body {
+    background-color: $color-gray;
+    color: $second-color;
+    font-family: $font-stack;
+  
+
+}
+
+h1 {
+    font-size: 2.5rem;
+
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: $primary-color;
+
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 20 rem;
+    margin: 10px 0;
+    line-height: 1.9em;
+}
+
+a {
+    text-decoration: none;
+    color: $color-black;
+    size: 30px;
+}
+
+.container {
+    margin: auto;
+    max-width: 1300px;
+    padding: 0 20px;
+    overflow: auto;
+}
+
+.large {
+    font-size: 18px;
+    color: $second-color;
+}
+
+.display-1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &-color {
+        background: $primary-color;
+        color: $second-color;
+        border: none;
+    }
+}
+
+form {
+    label {
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 7px 12px;
+        line-height: 1.5;
+        border: none;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+#mainheader {
+    
+    background: url('/img/compu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: left;
+    @media screen and (min-width: $desktop) {
+        background-size: 100%;
+        height: 100vh;
+    }
+
+}
+
+#navbar {
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+    @media screen and (min-width: $desktop) {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+     }
+
+    img {
+        width: 7%;
+        position: fixed;
+        left: 5px;
+        /* Ajusta el valor para mover la imagen hacia la izquierda */
+        top: 0;
+        /* Ajusta la posición vertical si es necesario */
+        /* Otros estilos que desees aplicar */
+    }
+
+    .container {
+        display: flex;
+        
+        align-items: center;
+        height: 100%;
+        @media screen and (min-width: $desktop) {
+           justify-content: space-between;
+        }
+
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        
+        
+        
+       
+
+        li {
+            margin-left: 40px;
+            
+        }
+
+        a {
+            font-size: 25px; 
+            font-weight: 1000; 
+            color:$primary-color;
+            &:hover{
+                color: blue;
+            }
+            @media screen and (min-width: $desktop) {
+                color: #1d1a1a;
+                
+            }
+        }
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            color: #1d1a1a;
+            
+
+        }
+    }
+}
+
+
+
+
+span {
+    display: block;
+    color: $primary-color;
+    padding-bottom: 20px;
+}
+
+span {
+    display: block;
+    color: $primary-color;
+    padding-bottom: 20px;
+}
+
+#showcase .showcase-text {
+    display: flex;
+    justify-content: space-between; // Alinea los elementos horizontalmente con espacio entre ellos
+    align-items: center; // Centra verticalmente los elementos
+    margin-top: 8%;
+    flex-direction: column;
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+}
+
+#showcase .showcase-text h1 {
+    text-align: left; // Alinea el título a la izquierda
+    margin: 0; // Elimina el margen superior
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0; // Elimina el margen superior para que el título se alinee con la imagen
+}
+
+
+#showcase .showcase-text h3 {
+    text-align: right; // Alinea el texto a la derecha
+    flex: 1; // Permite que el elemento ocupe el espacio restante en la fila
+   color: white;
+    
+    @media screen and (min-width: $desktop) {
+       margin-left: 200px;
+       color: #1d1a1a;
+
+    }
+}
+
+#showcase .showcase-text img {
+    width: 300px; // Ajusta el ancho deseado para la imagen
+    height: auto; // Mantén la proporción original de la imagen
+    border-radius: 20%;
+    filter: brightness(50%);
+    
+    @media screen and (min-width: $desktop) {
+        margin-left: 150px;
+    }
+}
+
+
+//#showcase {
+
+
+
+
+
+
+#about {
+    padding: 80px 0;
+    text-align: center;
+
+    p {
+        font-size: 1.5rem;
+        /* Ajusta el tamaño del texto a tu preferencia */
+    }
+
+
+}
+
+#features {
+    padding: 80px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+          @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+
+        .features-box {
+            flex: 1;
+            text-align: center;
+
+            p:first-child {
+                font-size: 4rem;
+                font-weight: 300;
+            }
+
+            p:last-child {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+#Projects {
+    padding: 80px 0;
+
+    h2 {
+        padding-bottom: 50px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Projects-flex {
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        @media screen and (min-width: $desktop) {
+           flex-direction: row;
+        }
+
+        .Projects-flex-box {
+            flex: 0 0 calc(16.6667% - 10px);
+            text-align: center;
+
+            img {
+                width: 500px;
+                /* Establece el ancho deseado */
+                height: 350px;
+                /* Establece la altura deseada */
+            }
+        }
+    }
+}
+
+#Skills {
+    padding: $base-font-size;
+
+    h2 {
+        padding-bottom: $padding-top;
+    }
+
+    .Skills-flex {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        ul {
+            list-style-type:lower-roman;
+          }
+    }
+
+
+}
+
+#work {
+    padding: $base-font-size;
+
+    h2 {
+        padding-bottom: $padding-top;
+    }
+
+    p {
+        font-size: 1.5rem; // Ajusta el tamaño de fuente deseado
+        text-align: center;
+      
+    }
+    
+
+    .work-flex {
+        display: flex;
+        gap: 10px;
+
+        &-box {
+            padding: $base-top;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        background: linear-gradient(to right, black 50%, #ccc 50%);
+        background-size: 200% 100%;
+        background-position: 0;
+        padding: 1rem 2 rem;
+        color: white;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        border-radius: 8px;
+        font-size: 20px;
+        color: white;
+        transition: all .3s ease-in-out;
+    }
+
+    a:hover {
+        background-position-x: 100%;
+        color: blue
+    }
+}
+
+
+
+
+
+#contact {
+    padding: $base-font-size;
+
+    h2 {
+        padding-bottom: $padding-top;
+        color: $primary-color;
+    }
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #Start {
+        .contenido-banner {
+            .contenedor-img {
+                img {
+                    max-width: 500%;
+                    /* Ajusta el ancho máximo de la imagen */
+                    height: auto;
+                    /* Mantén la proporción original de la imagen */
+                }
+            }
+
+            h2 {
+                font-size: 5rem;
+                /* Ajusta el tamaño del título */
+
+            }
+
+            .social-media {
+
+                text-align: center;
+                /* Centra los iconos horizontalmente */
+                display: flex;
+                justify-content: center;
+                /* Centra los iconos verticalmente */
+            }
+
+            a {
+                color: #333;
+                /* Cambia el color de los íconos */
+                font-size: 100px;
+                /* Ajusta el tamaño de los íconos */
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+
+
+
+
+#mainfooter {
+    padding: 30px;
+    text-align: center;
+
+    p {
+        font-size: 12px;
+    }
+
+}
